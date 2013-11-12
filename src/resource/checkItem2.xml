@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<groupname>oa系统	</groupname>
+	<version>1.0</version>
+	<urlItem>
+		<id>u1</id>
+		<title>org组织管理理</title>
+		<address>http://172.16.0.166:8080/org/exclude/OrgService.ws</address>
+		<detail>deatails</detail>
+	</urlItem>
+	<urlItem>
+		<id>u2</id>
+		<title>org2</title>
+		<address>http://172.16.0.166:8080/org_xx/exclude/OrgService.ws</address>
+		<detail>deatails</detail>
+	</urlItem>
+	<dbItem>
+		<id>d1</id>
+		<title>正式数据库</title>
+		<type>oracle</type>		
+		<ip>172.16.0.112</ip>
+		<port>1521</port>
+		<dbase>FGWWW1</dbase>
+		<username>fgwoa</username>
+		<password>fgwoa</password>
+		<detail>...</detail>
+	</dbItem>
+	<dbItem>
+		<id>d2</id>
+		<title>异常数据库</title>
+		<type>oracle</type>		
+		<ip>172.16.0.112</ip>
+		<port>1521</port>
+		<dbase>FGWWW1</dbase>
+		<username>fgwoa_xx</username>
+		<password>fgwoa</password>
+		<detail>...</detail>
+	</dbItem>
+</root>
