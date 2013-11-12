@@ -1,0 +1,3 @@
+
+1. 到 项目目录下 如“D:\eclipseWorkspace-3.7_python\serverCheck\src” 
+2. 执行 python convert2exe.py py2exe （需要在path中配置 python目录 如 “D:\worktools\python2.7.5”）
