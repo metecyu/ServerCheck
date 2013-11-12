@@ -1,49 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <root>
-	<groupname>oa系统	</groupname>
+	<groupname>BAT测试</groupname>
 	<version>1.0.0</version>
-	
 	<urlItem>
 		<id>u1</id>
-		<title>org组织管理理</title>
-		<address>http://172.16.0.166:8080/org/exclude/OrgService.ws</address>
-		<detail>deatails</detail>
+		<title>百度</title>
+		<address>http://www.baidu.com</address>
+		<detail>...</detail>
 	</urlItem>
-	
 	<urlItem>
 		<id>u2</id>
-		<title>信息平台</title>
-		<address>http://192.0.0.158:8080/XXPT/XxptService.ws</address>
-		<detail> urlconfig.xml </detail>
+		<title>taobao</title>
+		<address>http://www.taobao.com</address>
+		<detail>...</detail>
 	</urlItem>
-	
 	<urlItem>
 		<id>u3</id>
-		<title>访问授权</title>
-		<address>http://172.16.0.166:8080/fwsq/exclude/FwsqService.ws</address>
-		<detail> urlconfig.xml </detail>
-	</urlItem>
-
-<!-- 	<urlItem>
-		<id>u4</id>
-		<title>内网消息提醒</title>
-		<address>https://noAddress</address>
-		<detail> urlconfig.xml </detail>
-	</urlItem> -->
-	<urlItem>
-		<id>u4</id>
-		<title>cas服务器</title>
-		<address>https://jgjc.shdrc.gov.cn:8443/cas/login</address>
-		<detail>web.xml</detail>
+		<title>腾讯</title>
+		<address>http://www.webxml.com.cn/webservices/qqOnlineWebService.asmx?WSDL</address>
+		<detail>...</detail>
 	</urlItem>
 	
-		
-	
-	
-
 	<dbItem>
 		<id>d1</id>
-		<title>测试数据库</title>
+		<title>200外网数据库</title>
 		<type>oracle</type>		
 		<ip>172.16.0.112</ip>
 		<port>1521</port>
@@ -52,5 +32,4 @@
 		<password>fgwoa</password>
 		<detail>...</detail>
 	</dbItem>
-	
 </root>

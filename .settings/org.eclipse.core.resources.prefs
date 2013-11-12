@@ -1,10 +1,11 @@
-#Tue Nov 12 10:42:51 CST 2013
+#Tue Nov 12 12:52:11 CST 2013
 eclipse.preferences.version=1
 encoding//src/DbChecker.py=utf-8
 encoding//src/HttpChecker.py=utf-8
 encoding//src/ParserXml.py=utf-8
 encoding//src/ServerCheck.py=utf-8
 encoding//src/main.py=utf-8
+encoding//src/readme.txt=UTF-8
 encoding//src/run.py=utf-8
 encoding//test/HttpCheckerTest.py=utf-8
 encoding//test/ServerCheckTest.py=utf-8

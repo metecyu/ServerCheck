@@ -2,6 +2,7 @@
 import sys
 reload(sys)
 sys.setdefaultencoding("utf-8")
+import decimal
 
 #print sys.getdefaultencoding()  
 
@@ -58,7 +59,6 @@ class MyFrame(wx.Frame):
 
         self.list.SetImageList(self.il, wx.IMAGE_LIST_SMALL) 
 
-        time.sleep(2)
         # 刷新检查结果  
         # self.checkAllTest()         
         """
@@ -92,6 +92,7 @@ class MyFrame(wx.Frame):
         self.muteBtn = wx.Button(panel, -1, u'开始测试')
         self.muteBtn.Bind(wx.EVT_BUTTON, self.OnClick, self.muteBtn)  
         self.muteBtn.SetDefault()
+        self.muteBtn.SetFont(font)
         self.muteBtn.SetFocus()
         handleBox.Add(self.muteBtn, proportion=4, flag= wx.EXPAND, border=5)  
         
@@ -151,7 +152,6 @@ class MyFrame(wx.Frame):
             self.process.Update(80, 100)
             self.testResualtLabel.SetLabel('failure')
             self.process.SetBarColor(wx.RED)
-       
         
         self.process.SetValue(0);
         self.muteBtn.Enable()
@@ -160,18 +160,14 @@ class MyFrame(wx.Frame):
 class MyApp(wx.App):
     def OnInit(self):
         parserXml = ParserXml.ParserXml()  
-        #frame = MyFrame(None, id=-1, title="ServerCheck 1.0.0  [" +parserXml.getGroupname()+"]", size=(1200,1100))
-
-        frame = MyFrame(None, id=-1, title="ServerCheck 1.0.0 ", size=(1200,1100))
+        frame = MyFrame(None, id=-1, title="ServerCheck 1.0.0  [" +parserXml.getGroupname()+"]", size=(1200,1100))
 
         frame.Show(True)
-
         frame.SetSize((780, 480))
-        
         self.SetTopWindow(frame)
         
         icon=wx.EmptyIcon()   
-        icon.LoadFile("resource/images/360.ico",wx.BITMAP_TYPE_ICO)   
+        icon.LoadFile("resource/images/sc.ico",wx.BITMAP_TYPE_ICO)   
         frame.SetIcon(icon)
         #frame.tbicon=wx.TaskBarIcon()   
         #frame.tbicon.SetIcon(icon,"wxPython Demo")   
