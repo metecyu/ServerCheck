@@ -5,22 +5,19 @@ class DbCheckRet():
     errorMsg = '' # 错误消息
     spend =0 
     ip = ""
-    
-    
 '''
 用于检查 数据库联通是否正常
 '''
 class DbChecker(): 
     '''
-    检查是否可以正常连接
-    返回：DbCheckRet 对象
+            检查是否可以正常连接
+            返回：DbCheckRet 对象
     '''
     def checkDb(self,host,port,dbase,login,passwrd):
        #print platform.python_version()
        ret = DbCheckRet()
        try:
-           ret.ip = host
-           
+           ret.ip = host           
            st = time.time()   
            dsn = cx_Oracle.makedsn(host, port, dbase) 
            connection = cx_Oracle.connect(login, passwrd, dsn)
@@ -29,7 +26,6 @@ class DbChecker():
            end = time.time()  
            ret.status=1;           
            ret.spend = end - st
-           
        except cx_Oracle.DatabaseError as e:
            ret.errorMsg= e
            # print ret.errorMsg

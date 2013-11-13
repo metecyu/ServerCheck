@@ -1,7 +1,14 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <root>
-	<groupname>oa系统	</groupname>
+	<groupname>oa系统 及 相关服务</groupname>
 	<version>1.0.0</version>
+	
+	<urlItem>
+		<id>u0</id>
+		<title>*** OA系统  ***</title>
+		<address>http://192.0.0.144:8080/newOA/exclude/index.jsp</address>
+		<detail>exclude folder ignore cas filter</detail>
+	</urlItem>
 	
 	<urlItem>
 		<id>u1</id>
@@ -38,8 +45,7 @@
 		<address>http://192.0.0.146:8085/newOA/SignatureService.ws</address>
 		<detail>web.xml</detail>
 	</urlItem>
-
-
+	
 	<dbItem>
 		<id>d1</id>
 		<title>测试数据库</title>

@@ -3,9 +3,6 @@ import sys
 reload(sys)
 sys.setdefaultencoding("utf-8")
 import decimal
-
-#print sys.getdefaultencoding()  
-
 import ParserXml
 import ServerCheck
 from threading import Thread
@@ -30,7 +27,7 @@ packages = [('数据库', '正式数据哭', '172.0.16.112', '通过'),('数据�
 class MyFrame(wx.Frame):
     #----------------------------------------------------------------------
     def __init__(self, parent, id, title, size):
-
+        
         Publisher().subscribe(self.updateDisplay, "update") 
         Publisher().subscribe(self.updateResult, "ispass")
         
@@ -48,17 +45,12 @@ class MyFrame(wx.Frame):
         self.panel = panel
         self.list = wx.ListCtrl(panel, -1, style=wx.LC_REPORT)
         self.list.InsertColumn(0, '类型', width=100)
-        
         self.list.InsertColumn(1, '标题', width=150)
-        
         self.list.InsertColumn(2, '地址标示', width=350)
-        
         self.list.InsertColumn(3, '', width=50)
         self.list.InsertColumn(4, u'结果', width=100)
         '''需要添加图片列表'''
-
-        self.list.SetImageList(self.il, wx.IMAGE_LIST_SMALL) 
-
+        self.list.SetImageList(self.il, wx.IMAGE_LIST_SMALL)        
         # 刷新检查结果  
         # self.checkAllTest()         
         """
@@ -79,7 +71,8 @@ class MyFrame(wx.Frame):
         
         self.process.SetBackgroundColour("#cbcbcb")
         self.process.SetBorderColor(wx.BLACK)
-        handleBox.Add(self.process, proportion=14, flag= wx.EXPAND, border=5)  
+        handleBox.Add(self.process, proportion=14, flag= wx.EXPAND, border=5)
+          
         # 空格标题
         self.title = wx.StaticText(panel, -1, ' ')
         handleBox.Add(self.title, proportion=1, flag= wx.EXPAND, border=1)  
@@ -136,7 +129,6 @@ class MyFrame(wx.Frame):
                 self.list.SetItemColumnImage(index, 3,self.rightImgIdx)
             else:
                 self.list.SetItemColumnImage(index, 3,self.errImgIdx)
-                
             self.list.SetStringItem(index, 4,ret.msg)
         #self.process.Refresh()
         
@@ -188,7 +180,6 @@ class CheckThread(Thread):
         ''' 所有'''
         if serverCheck.isPass == 1: 
             time.sleep(1)
-                
         wx.CallAfter(Publisher().sendMessage, "update", retList,"noMessage")
         wx.CallAfter(Publisher().sendMessage, "ispass", serverCheck.isPass,"noMessage")  
     #----------------------------------------------------------------------
